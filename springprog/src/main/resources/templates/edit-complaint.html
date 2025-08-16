@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Complaint</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Complaint</h2>
+        <form action="/complaints/update" method="post">
+            <input type="hidden" name="id" th:value="${complaint.id}">
+
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="Pending" th:selected="${complaint.status == 'Pending'}">Pending</option>
+                <option value="In Progress" th:selected="${complaint.status == 'In Progress'}">In Progress</option>
+                <option value="Resolved" th:selected="${complaint.status == 'Resolved'}">Resolved</option>
+            </select>
+
+            <button type="submit">Update</button>
+        </form>
+        <a href="/complaints" class="back-link">Back to Complaint List</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Submit Complaint</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Submit a Complaint</h2>
+        <form action="/complaints/save" method="post">
+            <label for="studentName">Name:</label>
+            <input type="text" id="studentName" name="studentName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="branch">Branch:</label>
+            <input type="text" id="branch" name="branch" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <button type="submit">Submit Complaint</button>
+        </form>
+        <a href="/complaints" class="back-link">View Complaints</a>
+    </div>
+</body>
+</html>

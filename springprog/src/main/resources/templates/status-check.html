@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Complaint Status</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Complaint Status</h2>
+
+        <div th:if="${complaint != null}">
+            <p><strong>Complaint ID:</strong> <span th:text="${complaint.id}"></span></p>
+            <p><strong>Name:</strong> <span th:text="${complaint.studentName}"></span></p>
+            <p><strong>Email:</strong> <span th:text="${complaint.email}"></span></p>
+            <p><strong>Branch:</strong> <span th:text="${complaint.branch}"></span></p>
+            <p><strong>Description:</strong> <span th:text="${complaint.description}"></span></p>
+            <p><strong>Status:</strong> <span th:text="${complaint.status}"></span></p>
+        </div>
+
+        <a href="/complaints" class="btn">Back to Complaints</a>
+    </div>
+</body>
+</html>
